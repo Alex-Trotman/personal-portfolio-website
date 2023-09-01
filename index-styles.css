@@ -35,6 +35,10 @@ header {
     color: #333;
 }
 
+#hello-h1 {
+    
+}
+
 nav {
     display: flex;
     justify-content: flex-end;
@@ -48,6 +52,7 @@ ul {
     list-style: none;
     font-size: 18px;
     width: 50%;
+    padding: 10px;
 }
 
 ul li {
@@ -68,15 +73,56 @@ ul li a {
 }
 
 main {
-    
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }
 
 .main-section-1 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 75% 25%;
     margin-top: 115px;
-    height: 100dvh;
+    height: 75dvh;
 }
+
+.section-1-1 {
+    display: grid;
+    place-items: center;
+}
+
+#intro-container {
+    width: 25dvw;
+    padding: 50px;
+}
+
+#hello-h2 {
+    font-size: 50px;
+    margin: 0;
+}
+
+.wave {
+    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s;        /* Change to speed up or slow down */
+    animation-iteration-count: infinite;  /* Never stop waving :) */
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
+  }
+  
+  @keyframes wave-animation {
+      0% { transform: rotate( 0.0deg) }
+     10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+     20% { transform: rotate(-8.0deg) }
+     30% { transform: rotate(14.0deg) }
+     40% { transform: rotate(-4.0deg) }
+     50% { transform: rotate(10.0deg) }
+     60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+    100% { transform: rotate( 0.0deg) }
+  }
+  
+#intro-paragrph {
+    padding: 0;
+    margin: 0;
+}
+
 
 
 .see {
